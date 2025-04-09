@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="styles(UPDATED).css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="sidebar">
+      <input type="text" id="search" placeholder="Search items..." />
+      <h3>Filter by Type</h3>
+      <ul>
+        <li><input type="checkbox" /> Electronics</li>
+        <li><input type="checkbox" /> Furniture</li>
+        <li><input type="checkbox" /> Clothing</li>
+        <li><input type="checkbox" /> Books</li>
+        <li><input type="checkbox" /> Toys</li>
+        <li><input type="checkbox" /> Appliances</li>
+        <li><input type="checkbox" /> Sports</li>
+        <li><input type="checkbox" /> Beauty</li>
+      </ul>
+      <h3>Sort by</h3>
+      <select id="filterOption">
+        <option value="">Select...</option>
+        <option value="name">Name</option>
+        <option value="quantity">Quantity</option>
+        <option value="price">Price</option>
+      </select>
+      <div class="sort-direction">
+        <button>&#9650;</button>
+        <button>&#9660;</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <h1>Inventory Management</h1>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th>Image</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button class="add-btn" id="addProductBtn">Add Item</button>
+    </div>
+  </div>
+
+
+  <div id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add / Edit Product</h2>
+      <label>Name:</label>
+      <input type="text" id="productName" /><br /><br />
+      <label>Quantity:</label>
+      <input type="number" id="quantity" /><br /><br />
+      <label>Price:</label>
+      <input type="number" id="price" step="0.01" /><br /><br />
+      <label>Date:</label>
+      <input type="date" id="date" step="0.01" /><br /><br />
+      <label>Image URL:</label>
+      <input type="url" id="imageUrl" placeholder="Enter image URL (optional)" /><br /><br />
+      <label>Image Upload:</label>
+      <input type="file" id="productImage" accept="image/*" /><br /><br />
+      <button id="saveProduct">Save</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Wyclef Janssey Gutierrez. All Rights Reserved.
+  </div>
+<script src="script(UPDATED).js"></script>
+</body>
+</html>
