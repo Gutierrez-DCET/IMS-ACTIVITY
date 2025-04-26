@@ -11,15 +11,15 @@
     <div class="sidebar">
       <input type="text" id="search" placeholder="Search items..." />
       <h3>Filter by Type</h3>
-      <ul>
-        <li><input type="checkbox" /> Electronics</li>
-        <li><input type="checkbox" /> Furniture</li>
-        <li><input type="checkbox" /> Clothing</li>
-        <li><input type="checkbox" /> Books</li>
-        <li><input type="checkbox" /> Toys</li>
-        <li><input type="checkbox" /> Appliances</li>
-        <li><input type="checkbox" /> Sports</li>
-        <li><input type="checkbox" /> Beauty</li>
+      <ul id="typeFilters">
+      <li><input type="checkbox" value="Electronics" class="type-filter" /> Electronics</li>
+      <li><input type="checkbox" value="Furniture" class="type-filter" /> Furniture</li>
+      <li><input type="checkbox" value="Clothing" class="type-filter" /> Clothing</li>
+      <li><input type="checkbox" value="Books" class="type-filter" /> Books</li>
+      <li><input type="checkbox" value="Toys" class="type-filter" /> Toys</li>
+      <li><input type="checkbox" value="Appliances" class="type-filter" /> Appliances</li>
+      <li><input type="checkbox" value="Sports" class="type-filter" /> Sports</li>
+      <li><input type="checkbox" value="Beauty" class="type-filter" /> Beauty</li>
       </ul>
       <h3>Sort by</h3>
       <select id="filterOption">
@@ -42,6 +42,7 @@
             <th>Name</th>
             <th>Quantity</th>
             <th>Price</th>
+            <th>Type</th>
             <th>Date</th>
             <th>Image</th>
             <th>Actions</th>
@@ -64,6 +65,18 @@
       <input type="number" id="quantity" /><br /><br />
       <label>Price:</label>
       <input type="number" id="price" step="0.01" /><br /><br />
+      <label>Type:</label>
+      <select id="productType">
+      <option value="">Select Type</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Furniture">Furniture</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Books">Books</option>
+      <option value="Toys">Toys</option>
+      <option value="Appliances">Appliances</option>
+      <option value="Sports">Sports</option>
+      <option value="Beauty">Beauty</option>
+      </select><br /><br />
       <label>Date:</label>
       <input type="date" id="date" step="0.01" /><br /><br />
       <label>Image URL:</label>
